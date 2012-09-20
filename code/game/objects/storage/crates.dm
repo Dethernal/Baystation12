@@ -156,6 +156,15 @@
 	icon_closed = "hydrocrate"
 	density = 1
 
+/obj/structure/closet/crate/wallconsoleparts
+	desc = "A crate with same enginering stuff"
+	name = "Yellow crate"
+	icon = 'storage.dmi'
+	icon_state = "wallconsolescrate"
+	density = 1
+	icon_opened = "wallconsolescrateopen"
+	icon_closed = "wallconsolescrate"
+
 /obj/structure/closet/crate/hydroponics/prespawned
 	//This exists so the prespawned hydro crates spawn with their contents.
 /*	name = "Hydroponics crate"
@@ -206,6 +215,16 @@
 	..()
 	new /obj/item/clothing/suit/radiation(src)
 	new /obj/item/clothing/head/radiation(src)
+
+/obj/structure/closet/crate/wallconsoleparts/New()
+	..()
+	new /obj/item/weapon/storage/consolescreens(src)
+	new /obj/item/weapon/storage/capacitors(src)
+	new /obj/item/weapon/storage/scanningmodules(src)
+	new /obj/item/weapon/storage/commonelectronics(src)
+	new /obj/item/weapon/storage/toolbox/electrical(src)
+
+
 
 /obj/structure/closet/crate/open()
 	playsound(src.loc, 'click.ogg', 15, 1, -3)

@@ -207,3 +207,46 @@
 	..()
 	return
 */
+
+
+
+/obj/item/weapon/storage/consolescreens/New()
+
+	new /obj/item/weapon/stock_parts/console_screen(src)
+	new /obj/item/weapon/stock_parts/console_screen(src)
+	new /obj/item/weapon/stock_parts/console_screen(src)
+	new /obj/item/weapon/stock_parts/console_screen(src)
+	new /obj/item/weapon/stock_parts/console_screen(src)
+	new /obj/item/weapon/stock_parts/console_screen(src)
+	new /obj/item/weapon/stock_parts/console_screen(src)
+	..()
+	return
+
+/obj/item/weapon/storage/capacitors/New()
+
+	new /obj/item/weapon/stock_parts/capacitor(src)
+	new /obj/item/weapon/stock_parts/capacitor(src)
+	new /obj/item/weapon/stock_parts/capacitor(src)
+	..()
+	return
+
+/obj/item/weapon/storage/scanningmodules/New()
+
+	new /obj/item/weapon/stock_parts/scanning_module(src)
+	new /obj/item/weapon/stock_parts/scanning_module(src)
+	new /obj/item/weapon/stock_parts/scanning_module(src)
+	new /obj/item/weapon/stock_parts/scanning_module(src)
+	..()
+	return
+
+/obj/item/weapon/storage/commonelectronics/New()
+
+	new /obj/item/weapon/circuitboard/alarm(src)
+	new /obj/item/weapon/circuitboard/alarm(src)
+	new /obj/item/weapon/circuitboard/alarm(src)
+	new /obj/item/weapon/circuitboard/firealarm(src)
+	new /obj/item/weapon/circuitboard/firealarm(src)
+	new /obj/item/weapon/circuitboard/light_switch(src)
+	new /obj/item/weapon/circuitboard/light_switch(src)
+	..()
+	return

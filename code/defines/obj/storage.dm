@@ -613,6 +613,33 @@
 	icon_state = "box"
 	item_state = "syringe_kit"
 
+/obj/item/weapon/storage/consolescreens
+	name = "spare console screens"
+	desc = "A box of spare console screens."
+	icon = 'storage.dmi'
+	icon_state = "box"
+	item_state = "syringe_kit"
+
+/obj/item/weapon/storage/capacitors
+	name = "spare capacitors"
+	desc = "A box of spare capacitors."
+	icon = 'storage.dmi'
+	icon_state = "box"
+	item_state = "syringe_kit"
+
+/obj/item/weapon/storage/scanningmodules
+	name = "spare scanning modules"
+	desc = "A box of spare scanning modules."
+	icon = 'storage.dmi'
+	icon_state = "box"
+	item_state = "syringe_kit"
+
+/obj/item/weapon/storage/commonelectronics
+	name = "spare common circuit boards"
+	desc = "A box of spare common circuit boards."
+	icon = 'storage.dmi'
+	icon_state = "circuit"
+	item_state = "syringe_kit"
 
 
 
