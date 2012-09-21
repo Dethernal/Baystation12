@@ -162,7 +162,7 @@
 			return
 		var/mob/living/carbon/human/H = user
 		lockboxWiresCutted[wireIndex] = 1
-		if (wireColor<3)
+		if (wireIndex<3)
 			return
 		if(lockboxWiresCutted[3] & lockboxWiresCutted[4] & lockboxWiresCutted[5])
 			if((istype(H.l_ear, /obj/item/device/radio/headset) && H.l_ear:on == 1) || (istype(H.r_ear, /obj/item/device/radio/headset) && H.r_ear:on == 1))
