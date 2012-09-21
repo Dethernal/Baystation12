@@ -3,7 +3,9 @@
 *.rsc
 *.dmb
 *.lk
+.gitignore
 info.json
+/config/config.txt
 /config/admins.txt
 /config/moderators.txt
 /config/dbconfig.txt

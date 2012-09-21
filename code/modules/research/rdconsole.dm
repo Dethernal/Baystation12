@@ -380,11 +380,26 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 							if( new_item.type == /obj/item/weapon/storage/backpack/holding )
 								new_item.investigate_log("built by [key]","singulo")
 							new_item.reliability = being_built.reliability
-							if(linked_lathe.hacked) being_built.reliability = max((reliability / 2), 0)
+							if(linked_lathe.hacked)
+								new_item.reliability = rand(0,max((being_built.reliability / 2), 0))
+
+							var/obj/item/weapon/storage/lockbox/L = null
 							if(being_built.locked)
-								var/obj/item/weapon/storage/lockbox/L = new/obj/item/weapon/storage/lockbox(linked_lathe.loc)
-								new_item.loc = L
-								L.name += " ([new_item.name])"
+								if (linked_lathe.hacked)
+									if (rand(0,100)<20)
+										L = new/obj/item/weapon/storage/lockbox(linked_lathe.loc)
+										L.name += " ([new_item.name])"
+										del new_item
+									else if (rand(0,100)<50)
+										L = new/obj/item/weapon/storage/lockbox(linked_lathe.loc)
+										new_item.loc = L
+										L.name += " ([new_item.name])"
+									else
+										new_item.loc = linked_lathe.loc
+								else
+									L = new/obj/item/weapon/storage/lockbox(linked_lathe.loc)
+									new_item.loc = L
+									L.name += " ([new_item.name])"
 							else
 								new_item.loc = linked_lathe.loc
 							linked_lathe.busy = 0

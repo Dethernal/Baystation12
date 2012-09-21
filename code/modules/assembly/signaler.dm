@@ -127,6 +127,11 @@
 			A.pulse(src.airlock_wire)
 		else if(holder)
 			holder.process_activation(src, 1, 0)
+		else if(istype(src.loc, /obj/item/weapon/storage/lockbox))
+			var/obj/item/weapon/storage/lockbox/L = src.loc
+			if(!L.lockboxWiresCutted[L.lockboxWireColorToIndex[src.airlock_wire]])
+				L.pulse(L.lockboxWireColorToIndex[src.airlock_wire])
+
 		else
 			..()
 		return 1
