@@ -175,10 +175,6 @@
 		lockboxWiresCutted[wireIndex] = 0
 
 	proc/pulse(var/wireColor)
-		var/obj/item/device/radio/b = new /obj/item/device/radio(null)
-		b.config(list("Security" = 0))
-		b.autosay("\"DEBUG [wireColor]\"", "Scecial equipment computer", "department")
-		del(b)
 		var/wireIndex = lockboxWireColorToIndex[wireColor]
 		if (src.lockboxWiresCutted[wireIndex])
 			return
